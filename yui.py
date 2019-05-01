@@ -29,7 +29,7 @@ yui = Neuron(6, 1)
 yui.learn(train_data, train_output, 10000)
 
 print(yui.weights, yui.biases)
-print("Solving test...")
+print("Solving .33...")
 print(round(yui.think(test_data)))
 print("%error:")
 print(round((test_output-yui.think(test_data))*100))
