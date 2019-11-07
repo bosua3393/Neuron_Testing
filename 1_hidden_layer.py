@@ -26,16 +26,16 @@ test_output = array([[1], [1], [0], [0], [1]])
 
 # ------------------------------------
 
-rin = NeuronLayer(6, 6, 1)
-rin.learn(train_data, train_output, 100000)
+model = NeuronLayer(6, 6, 1)
+model.learn(train_data, train_output, 100000)
 
 
 # ------------------------------------
 
-print(rin.w1)
-print(rin.w2)
+print(model.w1)
+print(model.w2)
 
 print("Solved:")
-print(rin.think(test_data))
+print(model.think(test_data))
 print("error")
-print(round((rin.think(test_data)-test_output)*100), sum(round((abs(rin.think(test_data)-test_output))*100)/5))
+print(round((model.think(test_data)-test_output)*100), sum(round((abs(model.think(test_data)-test_output))*100)/5))
