@@ -59,16 +59,16 @@ test_output = array([[0], [1], [1], [1], [1],
 
 # ------------------------------------
 
-yuki = NeuronMultiLayer(6, 12, 12, 1)
-yuki.learn(train_data, train_output, 100000)
+model = NeuronMultiLayer(6, 12, 12, 1)
+model.learn(train_data, train_output, 100000)
 
 
 # ------------------------------------
 
-print(yuki.w1)
-print(yuki.w2)
-print(yuki.w3)
+print(model.w1)
+print(model.w2)
+print(model.w3)
 print("Solved:")
-print(yuki.think(test_data))
+print(model.think(test_data))
 print("error")
-print(round((yuki.think(test_data) - test_output) * 100), sum(round((abs(yuki.think(test_data) - test_output)) * 100) / 10))
+print(round((model.think(test_data) - test_output) * 100), sum(round((abs(model.think(test_data) - test_output)) * 100) / 10))
